@@ -13,28 +13,23 @@ azureDeploy: https://raw.githubusercontent.com/azure-samples/cosmosdb-chatgpt/ma
 
 # Azure Cosmos DB + OpenAI ChatGPT
 
-This sample application combines Azure Cosmos DB with OpenAI ChatGPT with a Blazor Server front-end for an intelligent chat bot application that shows off how you can build a 
-simple chat application with OpenAi ChatGPT and Azure Cosmos DB.
+此示例應用程序將Azure Cosmos DB與OpenAI ChatGPT結合，並使用Blazor Server前端，打造一個智能聊天機器人應用程式，展示如何利用OpenAI ChatGPT和Azure Cosmos DB構建一個簡單的聊天應用程式。
 
 ![Cosmos DB + ChatGPT user interface](screenshot.png)
 
 ## Features
 
-This application has individual chat sessions which are displayed and can be selected in the left-hand nav. Clicking on a session will show the messages that contain
-human prompts and AI completions. 
+此應用程式有個別的聊天會話，可以在左側導航中顯示和選擇。點擊一個會話將顯示包含人類提示和AI完成的消息。
 
-When a new prompt is sent to the Azure OpenAI service, some of the conversation history is sent with it. This provides context allowing ChatGPT to respond 
-as though it is having a conversation. The length of this conversation history can be configured from appsettings.json 
-with the `OpenAiMaxTokens` value that is then translated to a maximum conversation string length that is 1/2 of this value. 
+當向Azure OpenAI服務發送新提示時，會將部分對話歷史記錄一起發送。這提供了上下文，使ChatGPT能夠像在進行對話一樣回應。這個對話歷史記錄的長度可以從appsettings.json中進行配置，使用OpenAiMaxTokens值，然後將其轉換為最大對話字符串長度的1/2。
 
-Please note that the "text-davinci-003" model used by this sample has a maximum of 4096 tokens. Token are used in both the request and reponse from the service. Overriding the maxConversationLength to values approaching maximum token value could result in completions that contain little to no text if all of it has been used in the request.
+請注意，此示例使用的"text-davinci-003"模型最多只能使用4096個令牌。令牌在服務的請求和響應中都會使用。將maxConversationLength覆蓋為接近最大令牌值的值可能會導致完成只包含很少或沒有文本，如果所有文本都在請求中使用。
 
-The history for all prompts and completions for each chat session is stored in Azure Cosmos DB. Deleting a chat session in the UI will delete it's corresponding data as well.
+每個聊天會話的所有提示和完成的歷史記錄都存儲在Azure Cosmos DB中。在UI中刪除聊天會話將同時刪除其對應的數據。
 
-The application will also summarize the name of the chat session by asking ChatGPT to provide a one or two word summary of the first prompt. This allows you to easily
-identity different chat sessions.
+應用程序還將通過要求ChatGPT提供第一個提示的一個或兩個字的摘要來總結聊天會話的名稱。這使您可以輕鬆識別不同的聊天會話。
 
-Please note this is a sample application. It is intended to demonstrate how to use Azure Cosmos DB and Azure OpenAI ChatGPT together. It is not intended for production or other large scale use
+請注意，這是一個示例應用程序。它旨在演示如何將Azure Cosmos DB和Azure OpenAI ChatGPT一起使用。它不適用於生產或其他大規模使用。
 
 
 ## Getting Started
