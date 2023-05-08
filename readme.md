@@ -43,34 +43,34 @@ azureDeploy: https://raw.githubusercontent.com/azure-samples/cosmosdb-chatgpt/ma
 
 ### Installation
 
-1. Fork this repository to your own GitHub account.
+1. 將此存儲庫fork到您自己的GitHub帳戶中。
 1. Depending on whether you deploy using the ARM Template or Bicep, modify this variable in one of those files to point to your fork of this repository, "webSiteRepository": "https://github.com/Azure-Samples/cosmosdb-chatgpt.git" 
-1. If using the Deploy to Azure button below, also modify this README.md file to change the path for the Deploy To Azure button to your local repository.
-1. If you deploy this application without making either of these changes, you can update the repository by disconnecting and connecting an external git repository pointing to your fork.
+1. 如果使用下面的“部署到Azure”按鈕進行部署，還要修改此README.md文件，以將“部署到Azure”按鈕的路徑更改為您的本地存儲庫。
+1. 如果您在不進行這些更改的情況下部署此應用程序，則可以通過斷開並連接指向您的fork的外部git存儲庫來更新存儲庫。
 
 
-The provided ARM or Bicep Template will provision the following resources:
-1. Azure Cosmos DB account with database and container at 400 RU/s. This can optionally be configured to run on the Cosmos DB free tier if available for your subscription.
-1. Azure App service. This will be configured for CI/CD to your forked GitHub repository. This service can also be configured to run on App Service free tier.
-1. Azure Open AI account. You must also specify a name for the deployment of the "text-davinci-003" model which is used by this application.
+提供的ARM或Bicep模板將提供以下資源：
+1. Azure Cosmos DB帳戶，其中包含400 RU / s的數據庫和容器。如果您的訂閱可用，還可以將其配置為在Cosmos DB免費層上運行。
+1. Azure應用服務。這將被配置為CI / CD到您forked的GitHub存儲庫。此服務也可以配置為在應用服務免費層上運行。
+1. Azure Open AI帳戶。您還必須為此應用程序使用的“text-davinci-003”模型的部署指定一個名稱。
 
-Note: You must have access to Azure Open AI service from your subscription before attempting to deploy this application.
+注意：在嘗試部署此應用程序之前，您必須從訂閱中訪問Azure Open AI服務。
 
-All connection information for Azure Cosmos DB and Open AI is zero-touch and injected as environment variables in the Azure App Service instance at deployment time. 
+Azure Cosmos DB和Open AI的所有連接信息都是零觸摸的，並在部署時作為環境變量注入到Azure App Service實例中。 
 
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure-Samples%2Fcosmosdb-chatgpt%2Fmain%2Fazuredeploy.json)
+[![部署到Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure-Samples%2Fcosmosdb-chatgpt%2Fmain%2Fazuredeploy.json)
 
 
 ### Quickstart
 
-1. After deployment, go to the resource group for your deployment and open the Azure App Service in the Azure Portal. Click the web url to launch the website.
-1. Click + New Chat to create a new chat session.
-1. Type your question in the text box and press Enter.
+1. 部署後，轉到您的部署的資源群組，並在Azure門戶中打開Azure應用服務。單擊Web URL以啟動網站。
+1. 點擊+ New Chat以創建一個新的聊天會話。
+1. 在文本框中輸入您的問題，然後按Enter鍵。
 
 
 ## Clean up
 
-To remove all the resources used by this sample, you must first manually delete the deployed model within the Azure AI service. You can then delete the resource group for your deployment. This will delete all remaining resources.
+要刪除此示例使用的所有資源，您必須先手動刪除Azure AI服務中部署的模型。然後，您可以刪除您的部署的資源群組。這將刪除所有剩餘的資源。
 
 ## Resources
 
