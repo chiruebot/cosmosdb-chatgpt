@@ -36,9 +36,9 @@ azureDeploy: https://raw.githubusercontent.com/azure-samples/cosmosdb-chatgpt/ma
 
 ### Prerequisites
 
-- Azure Subscription
-- Subscription access to Azure OpenAI service. Start here to [Request Acces to Azure OpenAI Service](https://customervoice.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR7en2Ais5pxKtso_Pz4b1_xUOFA5Qk1UWDRBMjg0WFhPMkIzTzhKQ1dWNyQlQCN0PWcu)
-- Visual Studio, VS Code, or some editor if you want to edit or view the source for this sample.
+- Azure 訂用帳戶
+- 訂閱訪問 Azure OpenAI 服務。 從[Azure OpenAI 服務](https://customervoice.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR7en2Ais5pxKtso_Pz4b1_xUOFA5Qk1UWDRBMjg0WFhPMkIzTzhKQ1dWNyQlQCN0PWcu)請求訪問
+- 如果要編輯或查看此示例的源代碼，請使用 Visual Studio、VS Code 或某些編輯器。
 
 
 ### Installation
