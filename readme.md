@@ -44,7 +44,7 @@ azureDeploy: https://raw.githubusercontent.com/azure-samples/cosmosdb-chatgpt/ma
 ### Installation
 
 1. 將此存儲庫fork到您自己的GitHub帳戶中。
-1. Depending on whether you deploy using the ARM Template or Bicep, modify this variable in one of those files to point to your fork of this repository, "webSiteRepository": "https://github.com/Azure-Samples/cosmosdb-chatgpt.git" 
+1. 根據您是使用ARM模板還是Bicep，修改其中一個文件中的此變量，以指向您的存儲庫的fork，"webSiteRepository": "https://github.com/Azure-Samples/cosmosdb-chatgpt.git" 
 1. 如果使用下面的“部署到Azure”按鈕進行部署，還要修改此README.md文件，以將“部署到Azure”按鈕的路徑更改為您的本地存儲庫。
 1. 如果您在不進行這些更改的情況下部署此應用程序，則可以通過斷開並連接指向您的fork的外部git存儲庫來更新存儲庫。
 
